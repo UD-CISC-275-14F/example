@@ -1,0 +1,2 @@
+Never rely 100% on black box testing.
+Never rely 100% on white box testing.

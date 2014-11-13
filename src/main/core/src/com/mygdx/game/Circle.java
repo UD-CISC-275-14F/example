@@ -27,4 +27,19 @@ public class Circle {
 	public boolean overlaps(Circle other) {
 		return distanceTo(other) <= (radius + other.radius);
 	}
+	
+	public int complexMethod() {
+		if (radius < x) {
+			if (x < y) {
+				return 5;
+			}
+			return -1;
+		}
+		else {
+			if (y > x) {
+				return 2;
+			}
+			return 1;
+		}
+	}
 }
