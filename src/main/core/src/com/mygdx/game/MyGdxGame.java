@@ -2,6 +2,7 @@ package com.mygdx.game;
 
 import java.util.ArrayList;
 import java.util.Arrays;
+import java.util.Date;
 import java.util.Scanner;
 
 import com.badlogic.gdx.ApplicationAdapter;
@@ -67,7 +68,8 @@ public class MyGdxGame extends ApplicationAdapter {
         	platform.writeResult((int)((System.currentTimeMillis()/3000)));
         	
         	String sql = "INSERT INTO " + platform.getGoogleApps().getTableId("AtlasClassDatabaseReqs")
-        			+ " ('Student Id', 'First Date Attempted', '# Attempts') VALUES ('jatlas@udel.edu', '11/16/2014', 1)";
+        			+ " ('Student Id', 'First Date Attempted', '# Attempts') VALUES ('jatlas@udel.edu', '" + 
+        			new Date().toString() + "', 1)";
         	platform.getGoogleApps().queryFusionTable(sql, new GoogleAppsOnQueryResult(), authenticated);
         	result = true;
         }

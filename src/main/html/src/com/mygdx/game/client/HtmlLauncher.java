@@ -6,6 +6,9 @@ import com.badlogic.gdx.backends.gwt.GwtApplicationConfiguration;
 import com.mygdx.game.MyGdxGame;
 import com.mygdx.game.PlatformSpecificLogic;
 
+import edu.udel.jatlas.google.GoogleAppsFacade;
+import edu.udel.jatlas.google.GoogleAppsHttp;
+
 public class HtmlLauncher extends GwtApplication {
 
         @Override
@@ -15,6 +18,15 @@ public class HtmlLauncher extends GwtApplication {
 
         @Override
         public ApplicationListener getApplicationListener () {
-                return new MyGdxGame();
+                return new MyGdxGame(new PlatformSpecificLogic() {
+					GoogleAppsFacade gap = new GoogleAppsHttp();
+					
+					public void writeResult(int x) {
+					}
+					
+					public GoogleAppsFacade getGoogleApps() {
+						return gap;
+					}
+				});
         }
 }
