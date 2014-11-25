@@ -83,6 +83,7 @@ public class GoogleAppsHttp implements GoogleAppsFacade {
 	}
 
 	public String getTableId(String tableName) {
+		readProperties();
 		return properties.get(tableName);
 	}
 
