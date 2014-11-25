@@ -6,10 +6,10 @@ import junit.framework.TestCase;
 
 import com.mygdx.game.desktop.DesktopLauncher;
 
-import edu.udel.jatlas.google.GoogleAppsFacade.AccessToken;
-import edu.udel.jatlas.google.GoogleAppsFacade.OnObtainAccessToken;
-import edu.udel.jatlas.google.GoogleAppsFacade.OnQueryResult;
-import edu.udel.jatlas.google.GoogleAppsHttp;
+import edu.udel.jatlas.gdxexample.google.GoogleAppsHttp;
+import edu.udel.jatlas.gdxexample.google.GoogleAppsFacade.AccessToken;
+import edu.udel.jatlas.gdxexample.google.GoogleAppsFacade.OnObtainAccessToken;
+import edu.udel.jatlas.gdxexample.google.GoogleAppsFacade.OnQueryResult;
 
 public class TestGoogleApps extends TestCase {
 	private GoogleAppsHttp http;

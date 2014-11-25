@@ -1,4 +1,4 @@
-package edu.udel.jatlas.google;
+package edu.udel.jatlas.gdxexample.google;
 
 import java.io.BufferedReader;
 import java.io.IOException;
@@ -14,7 +14,7 @@ import com.badlogic.gdx.net.HttpStatus;
 import com.badlogic.gdx.utils.JsonReader;
 import com.badlogic.gdx.utils.JsonValue;
 
-import edu.udel.jatlas.gdx.util.GdxPollingDispatcher;
+import edu.udel.jatlas.gdxexample.gdx.util.GdxPollingDispatcher;
 
 public class GoogleAppsHttp implements GoogleAppsFacade {
 	Map<String, String> properties;

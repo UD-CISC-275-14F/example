@@ -1,4 +1,4 @@
-package com.mygdx.game;
+package edu.udel.jatlas.gdxexample;
 
 public class Circle {
 	private double x;

@@ -1,4 +1,4 @@
-package com.mygdx.game;
+package edu.udel.jatlas.gdxexample;
 
 import java.util.ArrayList;
 import java.util.Arrays;
@@ -15,9 +15,9 @@ import com.badlogic.gdx.graphics.Texture;
 import com.badlogic.gdx.graphics.g2d.BitmapFont;
 import com.badlogic.gdx.graphics.g2d.SpriteBatch;
 
-import edu.udel.jatlas.google.GoogleAppsFacade.AccessToken;
-import edu.udel.jatlas.google.GoogleAppsFacade.OnObtainAccessToken;
-import edu.udel.jatlas.google.GoogleAppsFacade.OnQueryResult;
+import edu.udel.jatlas.gdxexample.google.GoogleAppsFacade.AccessToken;
+import edu.udel.jatlas.gdxexample.google.GoogleAppsFacade.OnObtainAccessToken;
+import edu.udel.jatlas.gdxexample.google.GoogleAppsFacade.OnQueryResult;
 
 public class MyGdxGame extends ApplicationAdapter {
 	private ArrayList<String> WISDOM = new ArrayList<String>(Arrays.asList(

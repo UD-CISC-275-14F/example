@@ -1,4 +1,4 @@
-package edu.udel.jatlas.gdx.util;
+package edu.udel.jatlas.gdxexample.gdx.util;
 
 import java.util.Iterator;
 

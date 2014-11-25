@@ -1,13 +1,13 @@
-package com.mygdx.game.client;
+package edu.udel.jatlas.gdxexample.client;
 
 import com.badlogic.gdx.ApplicationListener;
 import com.badlogic.gdx.backends.gwt.GwtApplication;
 import com.badlogic.gdx.backends.gwt.GwtApplicationConfiguration;
-import com.mygdx.game.MyGdxGame;
-import com.mygdx.game.PlatformSpecificLogic;
 
-import edu.udel.jatlas.google.GoogleAppsFacade;
-import edu.udel.jatlas.google.GoogleAppsHttp;
+import edu.udel.jatlas.gdxexample.MyGdxGame;
+import edu.udel.jatlas.gdxexample.PlatformSpecificLogic;
+import edu.udel.jatlas.gdxexample.google.GoogleAppsFacade;
+import edu.udel.jatlas.gdxexample.google.GoogleAppsHttp;
 
 public class HtmlLauncher extends GwtApplication {
 

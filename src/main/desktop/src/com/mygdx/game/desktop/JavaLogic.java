@@ -1,9 +1,8 @@
 package com.mygdx.game.desktop;
 
-import com.mygdx.game.PlatformSpecificLogic;
-
-import edu.udel.jatlas.google.GoogleAppsFacade;
-import edu.udel.jatlas.google.GoogleAppsHttp;
+import edu.udel.jatlas.gdxexample.PlatformSpecificLogic;
+import edu.udel.jatlas.gdxexample.google.GoogleAppsFacade;
+import edu.udel.jatlas.gdxexample.google.GoogleAppsHttp;
 
 public class JavaLogic implements PlatformSpecificLogic {
 	private GoogleAppsHttp gap;

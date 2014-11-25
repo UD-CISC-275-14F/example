@@ -1,7 +1,8 @@
 package com.mygdx.game;
 
-import edu.udel.jatlas.google.GoogleAppsFacade;
-import edu.udel.jatlas.google.GoogleAppsHttp;
+import edu.udel.jatlas.gdxexample.PlatformSpecificLogic;
+import edu.udel.jatlas.gdxexample.google.GoogleAppsFacade;
+import edu.udel.jatlas.gdxexample.google.GoogleAppsHttp;
 
 public class IOSLogic implements PlatformSpecificLogic {
 	private GoogleAppsFacade gap;

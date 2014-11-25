@@ -1,4 +1,4 @@
-package edu.udel.jatlas.google;
+package edu.udel.jatlas.gdxexample.google;
 
 public interface GoogleAppsFacade {
 	public void obtainAccessToken(OnObtainAccessToken callback);

@@ -1,7 +1,6 @@
 package com.mygdx.game.test;
 
-import com.mygdx.game.Circle;
-
+import edu.udel.jatlas.gdxexample.Circle;
 import junit.framework.TestCase;
 
 public class CircleTest extends TestCase {

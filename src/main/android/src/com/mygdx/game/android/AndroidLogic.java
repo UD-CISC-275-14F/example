@@ -1,11 +1,9 @@
 package com.mygdx.game.android;
 
 import android.widget.Toast;
-
-import com.mygdx.game.PlatformSpecificLogic;
-
-import edu.udel.jatlas.google.GoogleAppsFacade;
-import edu.udel.jatlas.google.GoogleAppsHttp;
+import edu.udel.jatlas.gdxexample.PlatformSpecificLogic;
+import edu.udel.jatlas.gdxexample.google.GoogleAppsFacade;
+import edu.udel.jatlas.gdxexample.google.GoogleAppsHttp;
 
 public class AndroidLogic implements PlatformSpecificLogic {
 	private AndroidLauncher context;
