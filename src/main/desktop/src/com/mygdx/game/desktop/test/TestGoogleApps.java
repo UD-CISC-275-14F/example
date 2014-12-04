@@ -1,9 +1,12 @@
 package com.mygdx.game.desktop.test;
 
+import java.util.Arrays;
 import java.util.Date;
 
 import junit.framework.TestCase;
 
+import com.badlogic.gdx.utils.JsonReader;
+import com.badlogic.gdx.utils.JsonValue;
 import com.mygdx.game.desktop.DesktopLauncher;
 
 import edu.udel.jatlas.gdxexample.google.GoogleAppsHttp;
@@ -92,6 +95,45 @@ public class TestGoogleApps extends TestCase {
 			} catch (InterruptedException e) {
 				fail(e.getMessage());
 			}
+		}
+	}
+	
+	public void test_update() {
+		String ROWSQL = "SELECT ROWID FROM " + http.getTableId("AtlasClassDatabaseReqs") +" WHERE 'Student Id'=" + "'jatlas@udel.edu'";
+		final Object tokenwait = new Object();
+		final StringBuilder jsonTextsub = new StringBuilder();
+
+		http.queryFusionTable(ROWSQL, new OnQueryResult() {
+
+			public void success(String json) {
+				jsonTextsub.append(json);
+				
+				synchronized (tokenwait) {
+					tokenwait.notify();
+				}
+			}
+
+			public void failure(String error) {
+				synchronized (tokenwait) {
+					tokenwait.notify();
+					fail("Update failed: " + error);
+				}
+			}
+		}, getAccessToken());
+		
+		synchronized (tokenwait) {
+			try {
+				tokenwait.wait();
+			} catch (InterruptedException e) {
+				fail(e.getMessage());
+			}
+		}
+		
+		JsonReader reader = new JsonReader();
+		JsonValue rows = reader.parse(jsonTextsub.toString()).get("rows");
+		for (JsonValue row : rows) {
+			// row just has an id, so get that index of the row data as a long
+			System.out.println(row.getLong(0));
 		}
 	}
 }

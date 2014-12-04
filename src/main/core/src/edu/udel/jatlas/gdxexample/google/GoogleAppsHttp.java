@@ -78,7 +78,7 @@ public class GoogleAppsHttp implements GoogleAppsFacade {
 		request.setHeader("Content-Type", "application/x-www-form-urlencoded");
 		request.setHeader("Authorization", "Bearer " + token.accessToken);
 		request.setContent("sql=" + SQL);
-		Gdx.net.sendHttpRequest(request, new FusionTableInsert(callback));
+		Gdx.net.sendHttpRequest(request, new FusionTableQuery(callback));
 
 	}
 
@@ -87,10 +87,10 @@ public class GoogleAppsHttp implements GoogleAppsFacade {
 		return properties.get(tableName);
 	}
 
-	class FusionTableInsert implements HttpResponseListener {
+	class FusionTableQuery implements HttpResponseListener {
 		OnQueryResult callback;
 
-		public FusionTableInsert(OnQueryResult callback) {
+		public FusionTableQuery(OnQueryResult callback) {
 			this.callback = callback;
 		}
 
@@ -105,7 +105,7 @@ public class GoogleAppsHttp implements GoogleAppsFacade {
 				String response = httpResponse.getResultAsString();
 				Gdx.app.error("HttpResponse", response);
 				System.err.println(response);
-				callback.failure("Failed to insert to table: " + response);
+				callback.failure("Failed to query table: " + response);
 			}
 		}
 
@@ -114,7 +114,7 @@ public class GoogleAppsHttp implements GoogleAppsFacade {
 		}
 
 		public void failed(Throwable t) {
-			callback.failure("Failed to insert to table: " + t.getMessage());
+			callback.failure("Failed to query table: " + t.getMessage());
 		}
 
 	}
