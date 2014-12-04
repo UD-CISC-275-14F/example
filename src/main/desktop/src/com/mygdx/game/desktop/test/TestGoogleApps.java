@@ -98,7 +98,7 @@ public class TestGoogleApps extends TestCase {
 		}
 	}
 	
-	public void test_update() {
+	public void test_select() {
 		String ROWSQL = "SELECT ROWID FROM " + http.getTableId("AtlasClassDatabaseReqs") +" WHERE 'Student Id'=" + "'jatlas@udel.edu'";
 		final Object tokenwait = new Object();
 		final StringBuilder jsonTextsub = new StringBuilder();
